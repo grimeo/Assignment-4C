@@ -2,12 +2,17 @@
 # Redo the programs on assignment2 but now with functions that return multiple values 
 # (move all user inputs in one function)
 
-
-money = int(input("Enter the amount of money you have: "))
-apple_Price = int(input("Enter the price of an apple: "))
-
 apples_quantity = 0
 incremented_money = 0
+
+def getInputs():
+    global money
+    global apple_Price
+    
+    money = int(input("Enter the amount of money you have: "))
+    apple_Price = int(input("Enter the price of an apple: "))
+
+    return money, apple_Price
 
 if money < 0 or apple_Price < 0:
     print("Price or amount is out of bounds.")
