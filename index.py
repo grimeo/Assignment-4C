@@ -25,3 +25,5 @@ def solve(m, aP): # m is money, aP is apple_Price
             incremented_money += apple_Price
         print("You can buy " +str(apples_quantity)+ " apples and your change is "+ str(money - incremented_money)+" pesos.")
         
+newMoney, newPrice = getInputs()
+solve(newMoney, newPrice)
