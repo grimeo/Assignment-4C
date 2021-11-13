@@ -14,11 +14,14 @@ def getInputs():
 
     return money, apple_Price
 
-if money < 0 or apple_Price < 0:
-    print("Price or amount is out of bounds.")
-else :
-    while incremented_money <= money - apple_Price:
-        apples_quantity += 1
-        incremented_money += apple_Price
-    print("You can buy " +str(apples_quantity)+ " apples and your change is "+ str(money - incremented_money)+" pesos.")
-    
+def solve(m, aP): # m is money, aP is apple_Price
+    if money < 0 or apple_Price < 0:
+        print("Price or amount is out of bounds.")
+    else :
+        global apples_quantity
+        global incremented_money
+        while incremented_money <= money - apple_Price:
+            apples_quantity += 1
+            incremented_money += apple_Price
+        print("You can buy " +str(apples_quantity)+ " apples and your change is "+ str(money - incremented_money)+" pesos.")
+        
